@@ -1,4 +1,6 @@
-# Your [DocPad](http://docpad.org) Project
+# [joe.xoxomoon.com](http://joe.xoxomoon.com)
+
+Just my personal site.
 
 ## License
-Copyright &copy; 2013+ All rights reserved.
+Copyright &copy; Joe Mooon 2013 All rights reserved.
