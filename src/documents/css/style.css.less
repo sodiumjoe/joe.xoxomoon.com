@@ -1,0 +1,147 @@
+@import '../../bower_components/bootstrap/less/bootstrap.less';
+
+// Custom colors from Solarized https://github.com/altercation/solarized#the-values
+// -------------
+
+@black:                 #002b36; // base03
+@gray-darker:           #073642; // base02
+@gray-dark:             #586e75; // base01
+@gray:                  #839496; // base0
+@gray-light:            #93a1a1; // base1
+@gray-lighter:          #eee8d5; // base2
+@white:                 #fff;
+
+@blue:                  #268bd2;
+@green:                 #859900;
+@red:                   #dc322f;
+@yellow:                #b58900;
+@orange:                #cb4b16;
+@pink:                  #d33682;
+@purple:                #6c71c4;
+
+@blue-dark:              darken(@blue, 15%);
+
+// Scaffolding
+// -------------------------
+@body-bg:               @white;
+@text-color:            @black;
+
+
+// Links
+// -------------------------
+@link-color:            @blue;
+@link-hover-color:      @blue-dark;
+
+@selected-background:   @gray-lighter;
+
+// Override sprites
+
+// @iconSpritePath:                    "/img/joe.xoxomoon.png";
+// @iconWhiteSpritePath:               "/img/joe.xoxomoon.png";
+
+
+// Typography
+// -------------------------
+
+@font-face {
+	font-family:                    'Roboto';
+	src:                            url('/fonts/roboto-regular-webfont.eot');
+	src:                            url('/fonts/roboto-regular-webfont.woff') format('woff'),
+		                            url('/fonts/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		                            url('/fonts/roboto-regular-webfont.ttf') format('truetype'),
+		                            url('/fonts/roboto-regular-webfont.svg') format('svg');
+	font-weight:                    normal;
+	font-style:                     normal;
+}
+
+@font-family-sans-serif:            Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif:                 Georgia, "Times New Roman", Times, serif;
+@font-family-monospace:             Consolas, "Courier New", monospace;
+@font-family-base:                  @font-family-sans-serif;
+@headings-font-weight:              normal;    // instead of browser default, bold
+
+@border-radius-tiny:                1px;
+
+p, ol, ul {
+	font-family:                    @font-family-serif;
+}
+
+html {
+    overflow:                       -moz-scrollbars-vertical; 
+    overflow-y:                     scroll;
+}
+
+html, body {
+    height:                         100%;
+}
+
+// HEADER
+
+h1 {
+    padding-top:                    @grid-gutter-width;
+    a:hover {
+        text-decoration:            none;
+    }
+}
+
+.header-dark   { color:             @gray-darker; }
+.header-medium { color:             @gray-dark; }
+.header-light  { color:             @gray-light; }
+
+// NAV
+
+.active-nav {
+    background-color:               @gray-lighter;
+    color:                          @black;
+}
+
+#links {
+
+    a {
+        margin-right:               @grid-gutter-width/2;
+        padding:                    @grid-gutter-width/4 @grid-gutter-width/2;
+        color:                      @gray-light;
+        border:                     1px solid @gray-lighter;
+    }
+
+    margin-top:                     @grid-gutter-width;
+    padding-left:                   0;
+    background-color:               @white;
+
+    .nav > li > a:hover,
+    .nav > li > a:focus,
+    .selected,
+    .active {
+        .active-nav;
+    }
+}
+
+.nav {
+    font-family:                    @font-family-sans-serif;
+}
+
+.nav > li > a {
+    -webkit-border-radius:          @border-radius-tiny;
+    -moz-border-radius:             @border-radius-tiny;
+    border-radius:                  @border-radius-tiny;
+}
+
+
+// BODY
+
+// FOOTER
+
+footer {
+    margin-top:                     @grid-gutter-width * 3;
+    border-top:                     1px solid @gray-lighter;
+    padding-top:                    @grid-gutter-width * 3;
+    padding-bottom:                 @grid-gutter-width * 6;
+    p {
+        font-family:                @font-family-sans-serif;
+        margin-bottom:              0;
+        small {
+            line-height:            @line-height-base / 2;
+        }
+    }
+}
+
