@@ -7,7 +7,7 @@ Hi. I'm Joe.
 
 I live in a small house in rainy Portland, Oregon with my lovely wife Bev and our son Zeke.
 
-I write front-end JavaScript for [Janrain](http://janrain.com/).
+I write front-end JavaScript for [Janrain, Inc.](http://janrain.com/)
 
 Like any good Portlander, I enjoy drinking good coffee, eating good food, and riding my bicycle to work.
 

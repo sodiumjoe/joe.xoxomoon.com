@@ -18,9 +18,9 @@ html(lang="en")
           each item in ['prose', 'code', 'about']
             li
               if document.name === item + '.html'
-                a.active(href=item)= item
+                a.active(href='/' + item)= item
               else
-                a(href=item)= item
+                a(href='/' + item)= item
       != content
     footer
       .container!=site.copyright

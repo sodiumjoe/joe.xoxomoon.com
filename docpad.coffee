@@ -34,7 +34,7 @@ docpadConfig =
       email: "joe@xoxomoon.com"
 
       # Your company's name
-      copyright: "&copy; Joe Moon 2013"
+      copyright: "&copy; 2013 Joe Moon"
 
 
     # Helper Functions
