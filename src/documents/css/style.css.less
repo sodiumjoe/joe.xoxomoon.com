@@ -1,23 +1,20 @@
 @import '../../bower_components/bootstrap/less/bootstrap.less';
 
-// Custom colors from Solarized https://github.com/altercation/solarized#the-values
-// -------------
-
-@black:                 #002b36; // base03
-@gray-darker:           #073642; // base02
-@gray-dark:             #586e75; // base01
-@gray:                  #839496; // base0
-@gray-light:            #93a1a1; // base1
-@gray-lighter:          #eee8d5; // base2
+@black:                 #2c3e50;
+@gray-darker:           #34495e;
+@gray-dark:             #586e75;
+@gray:                  #7f8c8d;
+@gray-light:            #bdc3c7;
+@gray-lighter:          #ecf0f1;
 @white:                 #fff;
 
-@blue:                  #268bd2;
-@green:                 #859900;
-@red:                   #dc322f;
-@yellow:                #b58900;
-@orange:                #cb4b16;
-@pink:                  #d33682;
-@purple:                #6c71c4;
+@blue:                  #2980b9;
+@green:                 #16a085;
+@red:                   #c0392b;
+@yellow:                #f1c40f;
+@orange:                #e74c3c;
+@pink:                  #9b59b6;
+@purple:                #8e44ad;
 
 @blue-dark:              darken(@blue, 15%);
 
@@ -25,25 +22,9 @@
 // -------------------------
 @body-bg:               @white;
 @text-color:            @black;
-
-// Small screen / tablet
-@container-tablet:          728px;
-
-// Medium screen / desktop
-@container-desktop:         728px;
-
-// Large screen / wide desktop
-@container-large-desktop:   728px;
-
-.box {
-    margin-left:        0;
-    margin-right:       0;
-    padding:            @grid-gutter-width/4 @grid-gutter-width/2;
-    border:             1px solid @gray-lighter;
-    border-radius:      @border-radius-tiny;
-    box-shadow:         none;
+#main {
+    margin-left:        @grid-gutter-width*2;
 }
-
 
 // Links
 // -------------------------
@@ -54,8 +35,8 @@
 
 // Override sprites
 
-// @iconSpritePath:                    "/img/joe.xoxomoon.png";
-// @iconWhiteSpritePath:               "/img/joe.xoxomoon.png";
+@iconSpritePath:                    "/img/joe.xoxomoon.png";
+@iconWhiteSpritePath:               "/img/joe.xoxomoon.png";
 
 
 // Typography
@@ -84,15 +65,6 @@ p, ol, ul {
 	font-family:                    @font-family-serif;
 }
 
-html {
-    overflow:                       -moz-scrollbars-vertical; 
-    overflow-y:                     scroll;
-}
-
-html, body {
-    height:                         100%;
-}
-
 // HEADER
 
 h1 {
@@ -108,58 +80,52 @@ h1 {
 
 // NAV
 
-.active-nav {
-    background-color:               @gray-lighter;
-    color:                          @black;
-}
-
 #links {
 
-    a {
-        margin-right:               @grid-gutter-width/2;
-        padding:                    @grid-gutter-width/4 @grid-gutter-width/2;
+    margin:                         @grid-gutter-width -3px;
+
+    ul > li + li:before {
+        content:                    "/";
+        margin-right:               5px;
+    }
+
+    li {
+        padding-right:              @grid-gutter-width / 6;
         color:                      @gray-light;
-        border:                     1px solid @gray-lighter;
     }
 
-    margin-top:                     @grid-gutter-width;
-    padding-left:                   0;
-    background-color:               @white;
+    a {
+        color:                      @gray-light;
+        font-family:                @font-family-sans-serif;
+    }
 
-    .nav > li > a:hover,
-    .nav > li > a:focus,
-    .selected,
     .active {
-        .active-nav;
+        color:                      @red;
     }
-}
 
-.nav {
-    font-family:                    @font-family-sans-serif;
 }
-
-.nav > li > a {
-    -webkit-border-radius:          @border-radius-tiny;
-    -moz-border-radius:             @border-radius-tiny;
-    border-radius:                  @border-radius-tiny;
-}
-
 
 // BODY
+
+ul {
+    padding-left:                   0;
+    li {
+        padding-bottom:             @grid-gutter-width / 4;
+    }
+}
 
 // FOOTER
 
 footer {
-    margin-top:                     @grid-gutter-width * 3;
+    margin-top:                     @grid-gutter-width * 2;
     border-top:                     1px solid @gray-lighter;
-    padding-top:                    @grid-gutter-width * 3;
-    padding-bottom:                 @grid-gutter-width * 6;
+    padding-top:                    @grid-gutter-width * 2;
+    padding-bottom:                 @grid-gutter-width * 2;
     p {
         font-family:                @font-family-sans-serif;
-        margin-bottom:              0;
-        small {
-            line-height:            @line-height-base / 2;
-        }
+    }
+    a {
+        color:                      @green;
     }
 }
 

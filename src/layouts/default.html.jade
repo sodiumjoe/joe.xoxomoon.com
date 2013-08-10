@@ -4,24 +4,42 @@ html(lang="en")
     title= getPreparedTitle()
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(rel="stylesheet", href="/css/style.css")
+    link(rel="stylesheet", href="/css/joe-xoxomoon.css")
+    link(rel="stylesheet", href="/css/joe-xoxomoon-codes.css")
+    link(rel="stylesheet", href="/css/joe-xoxomoon-embedded.css")
+    link(rel="stylesheet", href="/css/joe-xoxomoon-animation.css")
+    link(rel="shortcut icon", href="img/joe.xoxomoon.png")
 
   body
-    .container
+    #main.container
       h1
         a(href="/")
           span.header-light joe
           span.header-medium .xoxo
           span.header-dark moon
           span.header-light .com
-      #links.navbar
-        ul.nav.navbar-nav
-          each item in ['prose', 'code', 'about']
-            li
-              if document.name === item + '.html'
-                a.active(href='/' + item)= item
-              else
-                a(href='/' + item)= item
+      .row
+        .col-lg-12
+          #links
+            ul.list-inline
+              each item in ['prose', 'code', 'about']
+                li
+                  if document.url.substring(0, item.length + 1) === '/' + item || ( document.url.substring(0, 5) === '/blog' && item === 'prose')
+                    a.active(href='/' + item)= item
+                  else
+                    a(href='/' + item)= item
       != content
-    footer
-      .container!=site.copyright
+      footer
+        .container!=site.copyright
+          p
+            a(href="mailto:joe@xoxomoon.com")
+              i.icon-mail-1
+            a(href="https://github.com/joebadmo")
+              i.icon-github-circled
+            a(href="https://plus.google.com/109995794392976695103/about")
+              i.icon-gplus-squared
+            a(href="https://twitter.com/joebadmo")
+              i.icon-twitter-squared
+            a(href="http://www.linkedin.com/in/joemoon")
+              i.icon-linkedin-squared
 
