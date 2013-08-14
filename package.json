@@ -15,11 +15,12 @@
   },
   "dependencies": {
     "docpad": "~6.48.0",
-    "docpad-plugin-marked": "~2.1.1",
     "docpad-plugin-jade": "~2.5.0",
     "docpad-plugin-less": "~2.2.0",
     "docpad-plugin-cleanurls": "~2.5.0",
-    "docpad-plugin-markdown": "~2.0.3"
+    "docpad-plugin-partials": "~2.7.2",
+    "moment": "~2.1.0",
+    "docpad-plugin-multimarkdown": "~2.0.0"
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {

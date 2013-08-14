@@ -18,16 +18,14 @@ html(lang="en")
           span.header-medium .xoxo
           span.header-dark moon
           span.header-light .com
-      .row
-        .col-lg-12
-          #links
-            ul.list-inline
-              each item in ['prose', 'code', 'about']
-                li
-                  if document.url.substring(0, item.length + 1) === '/' + item || ( document.url.substring(0, 5) === '/blog' && item === 'prose')
-                    a.active(href='/' + item)= item
-                  else
-                    a(href='/' + item)= item
+      .nav
+        ul.list-inline
+          each item in ['prose', 'code', 'about']
+            li
+              if document.url.substring(0, item.length + 1) === '/' + item || ( document.url.substring(0, 5) === '/blog' && item === 'prose')
+                a.active(href='/' + item)= item
+              else
+                a(href='/' + item)= item
       != content
       footer
         .container!=site.copyright

@@ -61,6 +61,8 @@ docpadConfig =
       # Merge the document keywords with the site keywords
       @site.keywords.concat(@document.keywords or []).join(', ')
 
+    moment: require('moment')
+
 
   # Collections
   # ===========

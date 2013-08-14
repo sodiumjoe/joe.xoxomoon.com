@@ -69,7 +69,7 @@ p, ol, ul {
 
 h1 {
     padding-top:                    @grid-gutter-width;
-    a:hover {
+    > a:hover {
         text-decoration:            none;
     }
 }
@@ -80,21 +80,25 @@ h1 {
 
 // NAV
 
-#links {
+.nav {
 
     margin:                         @grid-gutter-width -3px;
 
-    ul > li + li:before {
+    > ul > li + li:before {
         content:                    "/";
         margin-right:               5px;
     }
 
-    li {
+    > ul > li {
         padding-right:              @grid-gutter-width / 6;
         color:                      @gray-light;
     }
 
-    a {
+}
+
+.nav, .sub-nav {
+
+    > ul > li > a {
         color:                      @gray-light;
         font-family:                @font-family-sans-serif;
     }
@@ -105,13 +109,58 @@ h1 {
 
 }
 
+.sub-nav {
+    margin-top: -@grid-gutter-width * 1.5;
+}
+
 // BODY
 
-ul {
+ul, ol {
     padding-left:                   0;
-    li {
+    > li {
         padding-bottom:             @grid-gutter-width / 4;
     }
+}
+
+header {
+    h4 {
+        margin-bottom:              @grid-gutter-width;
+    }
+}
+
+ul.listing {
+
+    > li {
+    }
+
+    a.link-blue {
+        color:              @blue;
+    }
+
+    a.link-green {
+        color:              @green;
+    }
+
+    a.link-red {
+        color:              @red;
+    }
+
+    a.link-yellow {
+        color:              @yellow;
+    }
+
+    a.link-orange {
+        color:              @orange;
+    }
+
+    a.link-pink {
+        color:              @pink;
+    }
+
+    a.link-purple {
+        color:              @purple;
+    }
+
 }
 
 // FOOTER
@@ -121,7 +170,7 @@ footer {
     border-top:                     1px solid @gray-lighter;
     padding-top:                    @grid-gutter-width * 2;
     padding-bottom:                 @grid-gutter-width * 2;
-    p {
+    > p {
         font-family:                @font-family-sans-serif;
     }
     a {

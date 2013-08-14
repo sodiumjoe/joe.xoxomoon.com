@@ -1,17 +1,17 @@
 ---
 layout: default
 ---
+!=partial('blog-nav.html.jade')
 
 - var posts = getFiles({ relativeDirPath: 'blog' }, { date: -1 }).toJSON()
 
-h1
-  a(href='/blog')
-    = document.title
+- var rand = function() { return Math.floor(Math.random() * 7) };
+- var rands = []; for ( var i = 0, j = 0; i < posts.length; i++ ) { var r = 0; while ( r === j ) { r = rand() } rands.push(r); j = r; }
+- var colors = ['link-blue', 'link-green', 'link-red', 'link-yellow', 'link-orange', 'link-pink', 'link-purple' ];
 
-ul.list-unstyled
-  each post in posts
+ul.list-unstyled.listing.clearfix
+  each post, index in posts
     if post.basename != 'index'
-      li
-        a(href=post.url)= post.title
-        &nbsp; &bullet; &nbsp;
-        =post.date
+      li.pull-left
+        a(href=post.url, class!="#{colors[rands[index]]}")= post.title
+        | &nbsp;
