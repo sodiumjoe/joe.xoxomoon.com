@@ -20,20 +20,8 @@ While all of this self-reflexivity, the self-awareness of the film, the recursiv
 
 <h3 id="works-cited">Works Cited</h3>
 
-<ol>
-  <li>
-    *<a href="http://www.beingcharliekaufman.com/movies/adaptation.htm">Being Charlie Kaufman</a>*. Ed. Michael. 2003. 16 Oct. 2004.
-  </li>
-  <li>
-    Kaufman, Charlie, Robert McKee, and Susan Orlean. *Adaptation: The Shooting Script* (Newmarket Shooting Script Series). New York: Newmarket Press, 2002.
-  </li>
-  <li>
-    Leigh, Danny. <a href="http://film.guardian.co.uk/interview/interviewpages/0,6737,895012,00.html">"Let's Make a Meta-Movie"</a>. Guardian Unlimited. 2007. 14 Feb. 2003.
-  </li>
-  <li>
-    Orlean, Susan. *The Orchid Thief*. London: Random House UK Limited, 1999.
-  </li>
-  <li>
-    Poland, David. "Adaptation." The Hot Button. 2005. 10 Dec. 2002. Truffaut, François. "A Certain Tendency of the French Cinema." *Movies and Methods* Ed. Bill Nichols. University of California Press 1954): 224&ndash;237.
-  </li>
-</ol>
+1. *[Being Charlie Kaufman](href="http://www.beingcharliekaufman.com/movies/adaptation.htm")*. Ed. Michael. 2003. 16 Oct. 2004.
+1. Kaufman, Charlie, Robert McKee, and Susan Orlean. *Adaptation: The Shooting Script* (Newmarket Shooting Script Series). New York: Newmarket Press, 2002.
+3. Leigh, Danny. <a href="http://film.guardian.co.uk/interview/interviewpages/0,6737,895012,00.html">"Let's Make a Meta-Movie"</a>. Guardian Unlimited. 2007. 14 Feb. 2003.
+4. Orlean, Susan. *The Orchid Thief*. London: Random House UK Limited, 1999.
+5. Poland, David. "Adaptation." The Hot Button. 2005. 10 Dec. 2002. Truffaut, Fran&ccedil;ois. "A Certain Tendency of the French Cinema." *Movies and Methods* Ed. Bill Nichols. University of California Press 1954): 224&ndash;237.
