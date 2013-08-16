@@ -1,18 +1,12 @@
 # DOCKER-VERSION 0.5.3
 
-FROM ubuntu:latest
+FROM cmfatih/dun
 
-RUN apt-get update
-RUN apt-get install python-software-properties python g++ make
-RUN add-apt-repository ppa:chris-lea/node.js
-RUN apt-get update
-RUN apt-get install nodejs
+ADD . /src
+RUN npm install -g npm
+RUN npm install -g docpad@6.49
+RUN cd /src; npm install
 
-ADD . .
-
-RUN npm install
-
-EXPOSE 8080
-
-RUN [docpad generate --env static]
-CMD [docpad server]
+EXPOSE 9778
+RUN docpad generate --env static
+CMD cd /src; /src/node_modules/docpad/bin/docpad-server
