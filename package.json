@@ -20,7 +20,8 @@
     "docpad-plugin-cleanurls": "~2.5.0",
     "docpad-plugin-partials": "~2.7.2",
     "moment": "~2.1.0",
-    "docpad-plugin-multimarkdown": "~2.0.0"
+    "docpad-plugin-multimarkdown": "~2.0.0",
+    "docpad-plugin-repocloner": "~2.2.0"
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {

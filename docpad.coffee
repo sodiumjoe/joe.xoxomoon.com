@@ -105,7 +105,25 @@ docpadConfig =
           res.redirect 301, newUrl+req.url
         else
           next()
+     # webhook to regenerate site
+     server.use (req, res, next) ->
+       if (req.url.toLowerCase() == 'regenerate')
+         docpad.log('info', 'Regenerating site (webhook)')
+         docpad.action('generate')
+         res.send('regenerated')
+       else
+         next()
 
+  # Plugins
+  # =======
+
+  plugins:
+    repocloner:
+      repos: [
+        name: 'joe.xoxomoon.com'
+        path: 'src/documents'
+        url: 'https://github.com/joebadmo/joe.xoxomoon.com-content'
+      ]
 
 # Export our DocPad Configuration
 module.exports = docpadConfig
