@@ -12,12 +12,13 @@ docpadConfig =
     # Specify some site properties
     site:
       # The production url of our website
-      url: "http://website.com"
+      url: "http://joe.xoxomoon.com"
 
       # Here are some old site urls that you would like to redirect from
-      oldUrls: [ 'www.byjoemoon.com'
-               , 'blog.byjoemoon.com'
-               ]
+      oldUrls: [
+        'www.byjoemoon.com'
+        'blog.byjoemoon.com'
+      ]
 
       # The default title of our website
       title: "joe.xoxomoon.com"
@@ -105,24 +106,25 @@ docpadConfig =
           res.redirect 301, newUrl+req.url
         else
           next()
-     # webhook to regenerate site
-     server.use (req, res, next) ->
-       if (req.url.toLowerCase() == 'regenerate')
-         docpad.log('info', 'Regenerating site (webhook)')
-         docpad.action('generate')
-         res.send('regenerated')
-       else
-         next()
 
-  # Plugins
-  # =======
+      # regenerate from webhook
+      server.use (req, res, next) ->
+        if req.url == '/regen'
+          docpad.log 'info', 'regenerating site'
+          docpad.action 'generate'
+          res.send 'regenerated'
+        else
+          next()
+
+  # DocPad Plugins
+  # =============
 
   plugins:
     repocloner:
       repos: [
-        name: 'joe.xoxomoon.com'
+        name: 'joe.xoxomoon.com-content'
         path: 'src/documents'
-        url: 'https://github.com/joebadmo/joe.xoxomoon.com-content'
+        url: 'https://github.com/joebadmo/joe.xoxomoon.com-content.git'
       ]
 
 # Export our DocPad Configuration
