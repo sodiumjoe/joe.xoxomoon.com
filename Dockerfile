@@ -2,8 +2,6 @@
 
 FROM joebadmo/dun
 
-RUN apt-get install -y curl make gcc g++
-
 ADD . /src
 RUN npm install -g docpad@6.49
 RUN cd /src; npm install
